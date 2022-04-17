@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>01.png</file>
+        <file>02.png</file>
+        <file>03.png</file>
+        <file>04.png</file>
+        <file>05.png</file>
+        <file>06.png</file>
+        <file>07.png</file>
+        <file>08.png</file>
+        <file>09.png</file>
+        <file>back.png</file>
+        <file>fondo.png</file>
+        <file>title.png</file>
+        <file>fondo2.png</file>
+        <file>ven_random.png</file>
+        <file>ven_timer1.png</file>
+        <file>ven_timer2.png</file>
+        <file>ven_double.png</file>
+        <file>010.png</file>
+        <file>011.png</file>
+        <file>012.png</file>
+    </qresource>
+</RCC>
