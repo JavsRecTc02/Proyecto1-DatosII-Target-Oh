@@ -6,7 +6,6 @@
 #include "ui_gamedisplay.h"
 #include "gamedisplay.h"
 
-//class GameDisplay;
 
 class Player : public QMainWindow
 {
@@ -22,7 +21,7 @@ public:
 private:
 
     Ui::GameDisplay *ui;
-    GameDisplay *porfa;
+    GameDisplay *gameDisplay;
 
 };
 

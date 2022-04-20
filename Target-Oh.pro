@@ -10,12 +10,16 @@ CONFIG += c++11
 
 SOURCES += \
     gamedisplay.cpp \
+    gameimages.cpp \
+    gametargets.cpp \
     main.cpp \
     mainwindow.cpp \
     player.cpp
 
 HEADERS += \
     gamedisplay.h \
+    gameimages.h \
+    gametargets.h \
     mainwindow.h \
     player.h
 

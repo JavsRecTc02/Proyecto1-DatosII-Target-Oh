@@ -18,6 +18,7 @@
 using namespace std;
 
 class Player;
+class gameimages;
 
 namespace Ui {
 class GameDisplay;
