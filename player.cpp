@@ -29,13 +29,13 @@ void GameDisplay::random_player(){
 void GameDisplay::block_player(){
     if (player_2 == 1){
         //parcial_result2();
-        ui->play2->setStyleSheet("background: green");
+        ui->play2->setStyleSheet("background: lightgreen");
         ui->play1->setStyleSheet("background: black");
         ui->frame_tag1->setEnabled(false);
         ui->frame_tag2->setEnabled(true);
     }else{
         //parcial_result();
-        ui->play1->setStyleSheet("background: green");
+        ui->play1->setStyleSheet("background: lightgreen");
         ui->play2->setStyleSheet("background: black");
         ui->frame_tag2->setEnabled(false);
         ui->frame_tag1->setEnabled(true);

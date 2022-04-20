@@ -16,7 +16,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     player.cpp \
-    playeradvantages.cpp
+    playeradvantages.cpp \
+    restartgame.cpp
 
 HEADERS += \
     gamedisplay.h \
@@ -25,7 +26,8 @@ HEADERS += \
     gametargets.h \
     mainwindow.h \
     player.h \
-    playeradvantages.h
+    playeradvantages.h \
+    restartgame.h
 
 FORMS += \
     gamedisplay.ui \

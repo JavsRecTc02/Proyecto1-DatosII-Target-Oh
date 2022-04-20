@@ -57,18 +57,23 @@ GameDisplay::GameDisplay(QWidget *parent) :
 
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
 //METODO QUE LEE EL NOMBRE DEL PLAYER
 void GameDisplay::readtext(QString T,QString Q){
     ui->playertag1->setText(QString(T));
     ui->playertag2->setText(QString (Q));
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
 //METODO QUE REDUCE EL TIMER CADA SEGUNDO
 void GameDisplay::update_timer(){
     time= time.addSecs(-1);
     ui->timer_game->setText(time.toString("m:ss"));
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 //METODO PRINCIPAL QUE POSEE TODO LO NECESARIO PARA INICIAR EL JUEGO
 void GameDisplay::Start_game(){
@@ -117,7 +122,7 @@ void GameDisplay::Start_game(){
     ui->frame->setEnabled(true);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 
 
 //METODO QUE ACTUALIZA EL TIMER Y EL ESTADO ACTUAL DEL JUEGO
@@ -126,7 +131,7 @@ void GameDisplay::update_estade(){
     finish_result();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 
 //METODO PARA SELECCIONAR DOS TARJETAS//
 void GameDisplay::target_select(){
@@ -145,16 +150,7 @@ void GameDisplay::target_select(){
     }
 }
 
-
-//METODO PARA REINICIAR EL JUEGO//
-void GameDisplay::restart_game(){
-    hide();
-    QString player_1 = ui->playertag1->text();
-    QString player_2 = ui->playertag2->text();
-    newgame = new GameDisplay;
-    newgame->readtext(player_1,player_2);
-    newgame->show();
-}
+/////////////////////////////////////////////////////////////////////////////////////////
 
 GameDisplay::~GameDisplay()
 {

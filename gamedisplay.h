@@ -36,8 +36,9 @@ public:
 
     QTimer *timer=new QTimer();
     QTime time;
-    int fault_couples;
     QMessageBox msgBox;
+
+    void restart_game();
     void Start_game();
 
     QVector<QString> targets;
@@ -52,6 +53,7 @@ public:
     bool game_starts;
     bool hit;
     bool hit2;
+    int fault_couples;
 
     QVector <QString> images;
 
@@ -61,7 +63,7 @@ public:
 
 private slots:
     void random_player();
-    void restart_game();
+
     void update_estade();
     void update_timer();
     void finish_result();

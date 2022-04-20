@@ -19,6 +19,8 @@ public:
 private slots:
     void on_play_clicked();
 
+    void on_quit_clicked();
+
 private:
     Ui::MainWindow *ui;
     GameDisplay *gameDisplay;

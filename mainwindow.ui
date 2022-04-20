@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>760</width>
     <height>450</height>
    </rect>
   </property>
@@ -22,34 +22,47 @@
   </property>
   <property name="styleSheet">
    <string notr="true">#centralwidget{
-background-image: url(://fondo.png);
+background-image: url(://fondo2.png);
 }
 
 #label2{
-color:red;
+color: lightblue;
+qproperty-alignment: AlignCenter;
+background: black;
+border: 9px red;
+border-radius: 7px
 }
 
 #label3{
-color:red;
+color: lightblue;
+qproperty-alignment: AlignCenter;
+background: black;
+border: 9px red;
+border-radius: 7px
 }
 
 #play{
+background: black;
+color:lightgreen;
+}
+
+#quit{
 background: black;
 color:red;
 }
 
 #nick1{
-color: black;
+color: white;
 qproperty-alignment: AlignCenter;
-background: red;
-border: 9px red;
-border-radius: 7px
+background: black;
+border: 12px red;
+border-radius: 9px
 }
 
 #nick2{
-color: black;
+color: white;
 qproperty-alignment: AlignCenter;
-background: red;
+background: black;
 border: 9px red;
 border-radius: 7px
 }</string>
@@ -58,15 +71,16 @@ border-radius: 7px
    <widget class="QPushButton" name="play">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>360</y>
+      <x>60</x>
+      <y>380</y>
       <width>181</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>22</pointsize>
+      <italic>true</italic>
       <bold>true</bold>
       <strikeout>false</strikeout>
      </font>
@@ -78,16 +92,16 @@ border-radius: 7px
    <widget class="QLineEdit" name="nick1">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>240</y>
-      <width>141</width>
-      <height>21</height>
+      <x>70</x>
+      <y>180</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
-      <italic>false</italic>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
       <bold>true</bold>
      </font>
     </property>
@@ -98,8 +112,8 @@ border-radius: 7px
    <widget class="QLabel" name="label2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>200</y>
+      <x>80</x>
+      <y>120</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -107,6 +121,7 @@ border-radius: 7px
     <property name="font">
      <font>
       <pointsize>20</pointsize>
+      <italic>true</italic>
       <bold>true</bold>
      </font>
     </property>
@@ -117,15 +132,16 @@ border-radius: 7px
    <widget class="QLabel" name="label3">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>260</y>
-      <width>121</width>
+      <x>80</x>
+      <y>230</y>
+      <width>131</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>20</pointsize>
+      <italic>true</italic>
       <bold>true</bold>
      </font>
     </property>
@@ -136,21 +152,42 @@ border-radius: 7px
    <widget class="QLineEdit" name="nick2">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>310</y>
-      <width>141</width>
-      <height>21</height>
+      <x>70</x>
+      <y>290</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
-      <italic>false</italic>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quit">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>380</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>QUIT</string>
     </property>
    </widget>
   </widget>
