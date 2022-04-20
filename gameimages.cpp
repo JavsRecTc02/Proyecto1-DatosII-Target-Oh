@@ -7,7 +7,9 @@ gameimages::gameimages(QWidget *parent)
 
 }
 
-//METODO QUE MUESTRA LA IMAGEN ASIGNADA A CADA TARJETA
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO QUE MUESTRA LA IMAGEN ASIGNADA A CADA TARJETA//
 void GameDisplay::show_image(){
     QString target_name= target_current->objectName();//nombre del TARGET
     QString img = repart[target_name];//nombre de la IMAGEN
@@ -15,7 +17,9 @@ void GameDisplay::show_image(){
 
 }
 
-//METODO QUE SELECCIONA UNA IMAGEN EN EL ARRAY PARA DOS TARJETAS
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO QUE SELECCIONA UNA IMAGEN EN EL ARRAY PARA DOS TARJETAS//
 void GameDisplay::random_image(QVector<QString> &targets, QHash<QString, QString> &repart, QVector<QString> images){
     auto iterator = targets.begin();
     //int limit = (images.size());
@@ -28,7 +32,9 @@ void GameDisplay::random_image(QVector<QString> &targets, QHash<QString, QString
     }
 }
 
-// METODO QUE ELIMINA LAS IMAGENES REPETIDAS
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// METODO QUE ELIMINA LAS IMAGENES REPETIDAS//
 void GameDisplay::eliminate_images(){
     //int limit1 = (images.size());
     QString namecurr = target_current->objectName();
@@ -50,3 +56,5 @@ void GameDisplay::eliminate_images(){
     //images_bytes = images.size();
     //ui->numbytes->setText(QString::number(images_bytes));
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////

@@ -8,7 +8,9 @@ Player::Player(QWidget *parent)
 
 }
 
-//METODO PARA JUGADOR INICIAL RANDOM
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO PARA JUGADOR INICIAL RANDOM//
 void GameDisplay::random_player(){
 
     std::uniform_int_distribution<int>distribution(0,1);
@@ -20,7 +22,9 @@ void GameDisplay::random_player(){
 
 }
 
-//METODO QUE BLOQUEE EL FRAME CON LOS BUTTONS DE AYUDAS
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO QUE BLOQUEE EL FRAME CON LOS BUTTONS DE AYUDAS//
 
 void GameDisplay::block_player(){
     if (player_2 == 1){
@@ -37,3 +41,5 @@ void GameDisplay::block_player(){
         ui->frame_tag1->setEnabled(true);
     }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////

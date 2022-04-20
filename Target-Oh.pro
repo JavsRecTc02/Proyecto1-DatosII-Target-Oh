@@ -11,17 +11,21 @@ CONFIG += c++11
 SOURCES += \
     gamedisplay.cpp \
     gameimages.cpp \
+    gameresults.cpp \
     gametargets.cpp \
     main.cpp \
     mainwindow.cpp \
-    player.cpp
+    player.cpp \
+    playeradvantages.cpp
 
 HEADERS += \
     gamedisplay.h \
     gameimages.h \
+    gameresults.h \
     gametargets.h \
     mainwindow.h \
-    player.h
+    player.h \
+    playeradvantages.h
 
 FORMS += \
     gamedisplay.ui \

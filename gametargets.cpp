@@ -6,14 +6,17 @@ gametargets::gametargets(QWidget *parent)
 
 }
 
-/////METODO PARA QUE LAS TARJETAS SEAN RANDOM////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO PARA QUE LAS TARJETAS SEAN RANDOM//
 void GameDisplay::random_target(QVector<QString> &targets){
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     shuffle(targets.begin(), targets.end(), std::default_random_engine(seed));
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
-/////METODO QUE REINICIA LAS TARJETAS CON SU FONDO ORIGINAL////
+//METODO QUE REINICIA LAS TARJETAS CON SU FONDO ORIGINAL//
 void GameDisplay::restart_targets(){
     target_current->setStyleSheet("#"+target_current->objectName()+"{}");
     target_previous->setStyleSheet("#"+target_previous->objectName()+"{}");
@@ -22,8 +25,9 @@ void GameDisplay::restart_targets(){
     ui->frame->setEnabled(true);
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
-/////METODO PARA ACTUALIZAR LAS TARJETAS E IMAGENES UTILIZADAS////
+//METODO PARA ACTUALIZAR LAS TARJETAS E IMAGENES UTILIZADAS//
 void GameDisplay::refresh_targets(){
     eliminate_images();
     eliminate_targets();
@@ -32,9 +36,9 @@ void GameDisplay::refresh_targets(){
     ui->frame->setEnabled(true);
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
-
-/////METODO ELIMINAR TARJETAS CON EL MISMO NOMBRE////
+//METODO ELIMINAR TARJETAS CON EL MISMO NOMBRE//
 void GameDisplay::eliminate_targets(){
     //int limit = (targets.size());
     QString namecurr = target_current->objectName();
@@ -56,3 +60,5 @@ void GameDisplay::eliminate_targets(){
         }
     }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////

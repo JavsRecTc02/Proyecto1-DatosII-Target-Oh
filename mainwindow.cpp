@@ -15,7 +15,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//METODO PARA CREAR UNA SEGUNDA VENTANA
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//METODO PARA CREAR UNA SEGUNDA VENTANA//
 void MainWindow::on_play_clicked()
 {
     hide();
@@ -26,4 +28,6 @@ void MainWindow::on_play_clicked()
     gameDisplay->show();
 
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
