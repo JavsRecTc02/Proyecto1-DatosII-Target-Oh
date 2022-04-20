@@ -17,6 +17,8 @@
 
 using namespace std;
 
+class Player;
+
 namespace Ui {
 class GameDisplay;
 }

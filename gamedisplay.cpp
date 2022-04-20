@@ -61,36 +61,6 @@ void GameDisplay::readtext(QString T,QString Q){
     ui->playertag2->setText(QString (Q));
 }
 
-//METODO PARA JUGADOR INICIAL RANDOM
-void GameDisplay::random_player(){
-
-    std::uniform_int_distribution<int>distribution(0,1);
-    for(int ix = 0; ix<1; ++ix){
-        double value = distribution(*QRandomGenerator::global());
-    player_2 = value;
-    }
-    //ui->prueba->setText(QString::number(player_2));
-
-}
-
-//METODO QUE BLOQUEE EL FRAME CON LOS BUTTONS DE AYUDAS
-
-void GameDisplay::block_player(){
-    if (player_2 == 1){
-        //parcial_result2();
-        ui->play2->setStyleSheet("background: green");
-        ui->play1->setStyleSheet("background: black");
-        ui->frame_tag1->setEnabled(false);
-        ui->frame_tag2->setEnabled(true);
-    }else{
-        //parcial_result();
-        ui->play1->setStyleSheet("background: green");
-        ui->play2->setStyleSheet("background: black");
-        ui->frame_tag2->setEnabled(false);
-        ui->frame_tag1->setEnabled(true);
-    }
-}
-
 //METODO QUE SELECCIONE EL RESULTADO PARCIAL DEL JUGADOR ACTUAL
 
 void GameDisplay::select_parcialresult(){
