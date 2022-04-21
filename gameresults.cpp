@@ -20,7 +20,6 @@ void GameDisplay::finish_result(){
     if (fault_couples==0){
         timer->stop();
         winner_result();
-        //msgBox.setText("You Win! Points:" + QString::number(game_points)+"\nPlay again?");
         if(QMessageBox::Yes == msgBox.exec()){
             ui->frame->setEnabled(false);
             //Start_game();
@@ -35,7 +34,6 @@ void GameDisplay::finish_result(){
             timer->stop();
             ui->frame->setEnabled(false);
             winner_result();
-            //msgBox.setText("You lose, Restart?");
             if (QMessageBox::Yes == msgBox.exec()){
                 //Start_game();
                 restart_game();
@@ -74,8 +72,6 @@ void GameDisplay::parcial_result(){
         QTimer::singleShot(1000, this, SLOT(restart_targets()));
     }
     player_2 = 1;
-    //ui->play1->setStyleSheet("background: black");
-    //ui->play2->setStyleSheet("background: green");
  }
 
 
@@ -105,8 +101,6 @@ void GameDisplay::parcial_result2(){
         QTimer::singleShot(1000, this, SLOT(restart_targets()));
     }
     player_2 = 0;
-    //ui->play1->setStyleSheet("background: green");
-    //ui->play2->setStyleSheet("background: black");
  }
 
 /////////////////////////////////////////////////////////////////////////////////////////

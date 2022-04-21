@@ -46,15 +46,12 @@ void GameDisplay::eliminate_images(){
             //erase(images, images[i]);
 
             images_bytes = images.size() * sizeof(images[0]);
-            //images_bytes = images.capacity();
             ui->numbytes->setText(QString::number(images_bytes));
 
             break;
         }
     }
     limit_images--;
-    //images_bytes = images.size();
-    //ui->numbytes->setText(QString::number(images_bytes));
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
