@@ -15,7 +15,6 @@ public:
     int game_points;
     int game_points2;
     int fault_couples;
-    bool game_starts;
 
     void finish_result();
     void winner_result();

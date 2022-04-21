@@ -19,6 +19,9 @@ using namespace std;
 
 class Player;
 class gameimages;
+class gametargets;
+class playerAdvantages;
+class gameResults;
 
 namespace Ui {
 class GameDisplay;
