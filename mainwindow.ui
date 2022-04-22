@@ -25,6 +25,10 @@
 background-image: url(://fondo2.png);
 }
 
+#players{
+color:red;
+}
+
 #label2{
 color: lightblue;
 qproperty-alignment: AlignCenter;
@@ -72,7 +76,7 @@ border-radius: 7px
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>380</y>
+      <y>370</y>
       <width>181</width>
       <height>51</height>
      </rect>
@@ -173,7 +177,7 @@ border-radius: 7px
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>380</y>
+      <y>370</y>
       <width>181</width>
       <height>51</height>
      </rect>
@@ -188,6 +192,26 @@ border-radius: 7px
     </property>
     <property name="text">
      <string>QUIT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="players">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

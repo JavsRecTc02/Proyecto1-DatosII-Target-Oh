@@ -19,13 +19,22 @@ MainWindow::~MainWindow()
 
 //METODO PARA CREAR UNA SEGUNDA VENTANA//
 void MainWindow::on_play_clicked()
-{
-    hide();
+{  
     QString player_1 = ui->nick1->text();
     QString player_2 = ui->nick2->text();
-    gameDisplay = new GameDisplay(this);
-    gameDisplay->readtext(player_1,player_2);
-    gameDisplay->show();
+    if (player_1 == ""){
+        ui->players->setText("GAME NEEDS TWO PLAYERS!");
+    }
+    if (player_2 == ""){
+        ui->players->setText("GAME NEEDS TWO PLAYERS!");
+    }
+    else{
+        hide();
+        gameDisplay = new GameDisplay(this);
+        gameDisplay->readtext(player_1,player_2);
+        gameDisplay->show();
+    }
+
 
 }
 
