@@ -89,8 +89,8 @@ void GameDisplay::Start_game(){
     images={"01.png","02.png","03.png","04.png","05.png","06.png","07.png","08.png","09.png","010.png",
            "011.png","012.png"};
 
-    images_bytes = images.size()* sizeof(images[0]);
-    ui->numbytes->setText(QString::number(images_bytes));
+    //images_bytes = images.size()* sizeof(images[0]);
+    //ui->numbytes->setText(QString::number(images_bytes));
 
     random_player();
     block_player();
@@ -106,6 +106,7 @@ void GameDisplay::Start_game(){
 
     random_target(targets);
     random_image(targets, repart, images);
+    bytes_images();
 
     game_starts=false;
     hit=false;

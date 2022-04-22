@@ -43,6 +43,7 @@ public:
 
     void restart_game();
     void Start_game();
+    void bytes_images();
 
     QVector<QString> targets;
     QHash<QString, QString> repart;
@@ -52,7 +53,7 @@ public:
     int player_2;
     int limit_images;
     int limit_targets;
-    int images_bytes;
+    //int images_bytes;
     bool game_starts;
     bool hit;
     bool hit2;
