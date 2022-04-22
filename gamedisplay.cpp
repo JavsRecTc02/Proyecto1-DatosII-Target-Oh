@@ -14,7 +14,10 @@ GameDisplay::GameDisplay(QWidget *parent) :
     ui(new Ui::GameDisplay)
 {
     ui->setupUi(this);
+    //OBJETO QUE ACTUALIZA EL TIMER CADA SEGUNDO//
     QObject::connect(timer, SIGNAL(timeout()), this, SLOT(update_estade()));
+
+    //OBJETOS PARA DETECTAR UN CLICK EN CADA TARJETA//
     QObject::connect(ui->target01,SIGNAL(clicked()),  this, SLOT(target_select()));
     QObject::connect(ui->target02,SIGNAL(clicked()),  this, SLOT(target_select()));
     QObject::connect(ui->target03,SIGNAL(clicked()),  this, SLOT(target_select()));
@@ -41,13 +44,13 @@ GameDisplay::GameDisplay(QWidget *parent) :
     QObject::connect(ui->target024,SIGNAL(clicked()), this, SLOT(target_select()));
 
 
-    //OBJETOS DE VENTAJA PLAYER 1
+    //OBJETOS DE VENTAJA PLAYER 1//
     QObject::connect(ui->ven_random,SIGNAL(clicked()), this, SLOT(randomize_images()));
     QObject::connect(ui->ven_timer1,SIGNAL(clicked()), this, SLOT(up_timer()));
     QObject::connect(ui->ven_timer2,SIGNAL(clicked()), this, SLOT(down_timer()));
     QObject::connect(ui->ven_double,SIGNAL(clicked()), this, SLOT(double_points()));
 
-    //OBJETOS DE VENTAJA PLAYER 2
+    //OBJETOS DE VENTAJA PLAYER 2//
     QObject::connect(ui->ven_random2,SIGNAL(clicked()), this, SLOT(randomize_images2()));
     QObject::connect(ui->ven_timer01,SIGNAL(clicked()), this, SLOT(up_timer2()));
     QObject::connect(ui->ven_timer02,SIGNAL(clicked()), this, SLOT(down_timer2()));
@@ -59,7 +62,7 @@ GameDisplay::GameDisplay(QWidget *parent) :
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-//METODO QUE LEE EL NOMBRE DEL PLAYER
+//METODO QUE LEE EL NOMBRE DEL PLAYER//
 void GameDisplay::readtext(QString T,QString Q){
     ui->playertag1->setText(QString(T));
     ui->playertag2->setText(QString (Q));
@@ -67,7 +70,7 @@ void GameDisplay::readtext(QString T,QString Q){
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-//METODO QUE REDUCE EL TIMER CADA SEGUNDO
+//METODO QUE REDUCE EL TIMER CADA SEGUNDO//
 void GameDisplay::update_timer(){
     time= time.addSecs(-1);
     ui->timer_game->setText(time.toString("m:ss"));
@@ -75,7 +78,7 @@ void GameDisplay::update_timer(){
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-//METODO PRINCIPAL QUE POSEE TODO LO NECESARIO PARA INICIAR EL JUEGO
+//METODO PRINCIPAL QUE POSEE TODO LO NECESARIO PARA INICIAR EL JUEGO//
 void GameDisplay::Start_game(){
 
     targets= {"target01", "target02", "target03", "target04",
@@ -88,9 +91,6 @@ void GameDisplay::Start_game(){
 
     images={"01.png","02.png","03.png","04.png","05.png","06.png","07.png","08.png","09.png","010.png",
            "011.png","012.png"};
-
-    //images_bytes = images.size()* sizeof(images[0]);
-    //ui->numbytes->setText(QString::number(images_bytes));
 
     random_player();
     block_player();
@@ -126,7 +126,7 @@ void GameDisplay::Start_game(){
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
-//METODO QUE ACTUALIZA EL TIMER Y EL ESTADO ACTUAL DEL JUEGO
+//METODO QUE ACTUALIZA EL TIMER Y EL ESTADO ACTUAL DEL JUEGO//
 void GameDisplay::update_estade(){
     update_timer();
     finish_result();

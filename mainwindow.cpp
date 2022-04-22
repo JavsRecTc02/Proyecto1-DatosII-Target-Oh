@@ -31,7 +31,7 @@ void MainWindow::on_play_clicked()
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-//METODO PARA QUITAR EL JUEGO
+//METODO PARA CERRAR EL JUEGO
 void MainWindow::on_quit_clicked()
 {
     QCoreApplication::quit();

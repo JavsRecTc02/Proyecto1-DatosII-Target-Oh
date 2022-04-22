@@ -54,6 +54,7 @@ void GameDisplay::eliminate_images(){
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+//METODO QUE OBTENGA LA CANTIDAD DE BYTES EN USO DE VECTOR DE LAS IMAGENES//
 void GameDisplay::bytes_images(){
     int bytes=0;
     for (int i=0; i <= limit_images; i++){
