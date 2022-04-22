@@ -29,10 +29,8 @@ void GameDisplay::restart_targets(){
 
 //METODO PARA ACTUALIZAR LAS TARJETAS E IMAGENES UTILIZADAS//
 void GameDisplay::refresh_targets(){
-    eliminate_images();
-    eliminate_targets();
-    random_image(targets, repart, images);
     random_target(targets);
+    random_image(targets, repart, images);    
     ui->frame->setEnabled(true);
 }
 

@@ -49,24 +49,19 @@ public:
 
     QVector<QString> targets;
     QHash<QString, QString> repart;
-    QVector <QString> images;
-
-
-    void random_target(QVector<QString> &targets);
-    void random_image(QVector<QString> &targets, QHash<QString, QString> &repart, QVector<QString> images);
-
+    QVector <QString> images;    
 
     int game_points;
     int game_points2;
+    int fault_couples;
     int player_2;
     int limit_images;
     int limit_targets;
 
-
     bool game_starts;
     bool hit;
     bool hit2;
-    int fault_couples;
+
 
     QPushButton* target_previous;
     QPushButton* target_current;
@@ -84,6 +79,9 @@ public:
 
 
 private slots:
+
+    void random_target(QVector<QString> &targets);
+    void random_image(QVector<QString> &targets, QHash<QString, QString> &repart, QVector<QString> images);
 
     void update_timer();
     void update_estade();

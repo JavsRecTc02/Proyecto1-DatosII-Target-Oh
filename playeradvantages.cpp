@@ -13,8 +13,9 @@ playerAdvantages::playerAdvantages(QWidget *parent)
 void GameDisplay::randomize_images(){
     ui->ven_tag->setText(QString("RANDOMIZE!"));
     ui->frame->setEnabled(false);
-    random_image(targets, repart, images);
-    random_target(targets);
+    //random_image(targets, repart, images);
+    //random_target(targets);
+    refresh_targets();
     ui->frame->setEnabled(true);
     ui->ven_random->setEnabled(false);
     ui->ven_random->hide();
@@ -26,8 +27,9 @@ void GameDisplay::randomize_images(){
 void GameDisplay::randomize_images2(){
     ui->ven_tag->setText(QString("RANDOMIZE!"));
     ui->frame->setEnabled(false);
-    random_image(targets, repart, images);
-    random_target(targets);
+    //random_image(targets, repart, images);
+    //random_target(targets);
+    refresh_targets();
     ui->frame->setEnabled(true);
     ui->ven_random2->setEnabled(false);
     ui->ven_random2->hide();

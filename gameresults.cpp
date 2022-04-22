@@ -50,6 +50,8 @@ void GameDisplay::finish_result(){
 void GameDisplay::parcial_result(){
     if(repart[target_current->objectName()]==repart[target_previous->objectName()]){
         game_points+=100;
+        eliminate_images();
+        eliminate_targets();
         if (hit == true){
             game_points+=100;
             ui->Points_2->setText(QString::number(game_points));
@@ -58,7 +60,7 @@ void GameDisplay::parcial_result(){
         ui->Points_2->setText(QString::number(game_points));
         fault_couples--;
         ui->frame->setEnabled(false);
-        QTimer::singleShot(1200, this, SLOT(refresh_targets()));
+        QTimer::singleShot(1500, this, SLOT(refresh_targets()));
         finish_result();
     }else{
         game_points-=20;
@@ -79,6 +81,8 @@ void GameDisplay::parcial_result(){
 void GameDisplay::parcial_result2(){
     if(repart[target_current->objectName()]==repart[target_previous->objectName()]){
         game_points2+=100;
+        eliminate_images();
+        eliminate_targets();
         if (hit2 == true){
             game_points2+=100;
             ui->Points_22->setText(QString::number(game_points2));
@@ -87,7 +91,7 @@ void GameDisplay::parcial_result2(){
         ui->Points_22->setText(QString::number(game_points2));
         fault_couples--;
         ui->frame->setEnabled(false);
-        QTimer::singleShot(1200, this, SLOT(refresh_targets()));
+        QTimer::singleShot(1500, this, SLOT(refresh_targets()));
         finish_result();
     }else{
         game_points2-=20;
