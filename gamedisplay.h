@@ -41,62 +41,70 @@ public:
     QTime time;
     QMessageBox msgBox;
 
+    void random_player();
     void restart_game();
     void Start_game();
     void bytes_images();
+    void show_image();
 
     QVector<QString> targets;
     QHash<QString, QString> repart;
+    QVector <QString> images;
+
+
+    void random_target(QVector<QString> &targets);
+    void random_image(QVector<QString> &targets, QHash<QString, QString> &repart, QVector<QString> images);
+
 
     int game_points;
     int game_points2;
     int player_2;
     int limit_images;
     int limit_targets;
-    //int images_bytes;
+
+
     bool game_starts;
     bool hit;
     bool hit2;
     int fault_couples;
 
-    QVector <QString> images;
-
     QPushButton* target_previous;
     QPushButton* target_current;
 
+    void eliminate_targets();
+    void eliminate_images();
+    void block_player();
 
-private slots:
-    void random_player();
 
-    void update_estade();
-    void update_timer();
+    void parcial_result2();
+    void parcial_result();
+    void select_parcialresult();
     void finish_result();
     void winner_result();
-    void random_target(QVector<QString> &targets);
-    void random_image(QVector<QString> &targets, QHash<QString, QString> &repart, QVector<QString> images);   
-    void show_image();
 
-    void parcial_result();  
-    void select_parcialresult();
 
+private slots:
+
+    void update_timer();
+    void update_estade();
     void restart_targets();
     void target_select();
     void refresh_targets();
-    void eliminate_targets();
-    void eliminate_images();
+
+    //voids player 1 power ups
 
     void randomize_images();
     void up_timer();
     void down_timer();
     void double_points();
 
-    //voids player 2
-    void parcial_result2();
+    //voids player 2 power ups
+
     void randomize_images2();
     void up_timer2();
     void down_timer2();
     void double_points2();
-    void block_player();
+
 
 
 private:

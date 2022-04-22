@@ -111,7 +111,7 @@ void GameDisplay::Start_game(){
     game_starts=false;
     hit=false;
 
-    time.setHMS(0,1,0);
+    time.setHMS(0,1,30);
     ui->timer_game->setText(time.toString("m:ss"));
     timer->start(1000);
 

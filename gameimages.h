@@ -16,6 +16,7 @@ public:
 
     int limit_images;
     int images_bytes;
+    void bytes_images();
 
 private:
 
